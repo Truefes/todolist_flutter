@@ -10,7 +10,23 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.red,
+        appBar: AppBar(
+          leading: const Icon(Icons.arrow_back_rounded),
+          title: Text("Hello World!"),
+          centerTitle: true,
+          backgroundColor: Colors.blueGrey[900],
+          actions: [const Icon(Icons.menu)],
+        ),
+        body: Column(children: <Widget>[
+          SizedBox(
+            height: 100,
+          ),
+          Center(),
+          const Image(
+            image: NetworkImage('https://picsum.photos/250?image=9'),
+          ),
+        ]),
+        backgroundColor: Colors.blueGrey[200],
       ),
     );
   }
